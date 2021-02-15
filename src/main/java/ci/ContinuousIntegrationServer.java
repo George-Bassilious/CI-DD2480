@@ -58,6 +58,7 @@ public class ContinuousIntegrationServer extends AbstractHandler
             String line = "";
             while ((line = reader.readLine()) != null) {
                 outputFromTests = outputFromTests + line;
+                break;
             }
 
             System.out.println("Ran maven tests.");
