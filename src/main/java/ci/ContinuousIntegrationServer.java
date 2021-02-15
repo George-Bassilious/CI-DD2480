@@ -51,7 +51,7 @@ public class ContinuousIntegrationServer extends AbstractHandler
 
             System.out.println("Running maven test.");
             process = Runtime.getRuntime().exec("./mvnw test", dummyEnvs, new File(pathToTempDir));
-            process.waitFor();
+            process.waitFor()
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String outputFromTests = "";
